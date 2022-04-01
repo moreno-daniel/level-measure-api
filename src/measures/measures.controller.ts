@@ -10,7 +10,8 @@ export class MeasuresController {
   @Post()
   async create(@Body() createMeasureDto: CreateMeasureDto, @Res() res) {
     let operationMode = await this.measuresService.create(createMeasureDto);
-    return res.status(HttpStatus.OK).send("1") 
+    console.log(res)
+    return res.status(HttpStatus.OK).send(`"1"`) 
   }
 
   // @Get()
